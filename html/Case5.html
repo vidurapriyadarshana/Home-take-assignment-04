@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="/assets/lib/normalize.css">
+  <link rel="stylesheet" href="/assets/lib/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.css">
+
+  <title>Full-Screen Image Slider</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .slider {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      animation-name: slide-animation;
+      animation-duration: 12s;
+      animation-iteration-count: infinite;
+    }
+
+    .slide {
+      min-width: 100%;
+      height: 100%;
+      animation-timing-function: ease-in-out;
+      animation-duration: 1s;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+    @keyframes slide-animation {
+      0% {
+        transform: translateX(0);
+      }
+      25% {
+        transform: translateX(-100%);
+      }
+      50% {
+        transform: translateX(-200%);
+      }
+      75% {
+        transform: translateX(-300%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="slider">
+  <div class="slides">
+    <div class="slide">
+      <img src="/assets/images/animation_slide%20(2)/animation_slide/slide1.jpeg" alt="Image 1">
+    </div>
+    <div class="slide">
+      <img src="/assets/images/animation_slide%20(2)/animation_slide/slide2.jpeg" alt="Image 2">
+    </div>
+    <div class="slide">
+      <img src="/assets/images/animation_slide%20(2)/animation_slide/slide3.jpeg" alt="Image 3">
+    </div>
+    <div class="slide">
+      <img src="/assets/images/animation_slide%20(2)/animation_slide/slide4.jpeg" alt="Image 4">
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
