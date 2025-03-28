@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="/assets/lib/normalize.css">
+    <link rel="stylesheet" href="/assets/lib/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.css">
+
+    <style>
+        section{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+        }
+        div{
+            width: 300px;
+            aspect-ratio: 1/1;
+            border-radius: 100%;
+
+
+            animation-name:my-rotate ;
+            animation-duration: 2s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes my-rotate {
+            from{
+                width: 0px;
+                aspect-ratio: 1/1;
+                border-radius: 100%;
+                border: 2px solid blue;
+            }to{
+                 width: 300px;
+                 aspect-ratio: 1/1;
+                 border-radius: 100%;
+                 border: 2px solid black;
+                 opacity: 0;
+
+             }
+        }
+
+    </style>
+
+</head>
+<body>
+
+<section>
+    <div></div>
+</section>
+
+</body>
+</html>
